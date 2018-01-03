@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="237.0" prefWidth="339.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UI.create.CreateUI">
+   <children>
+      <Button layoutX="116.0" layoutY="175.0" mnemonicParsing="false" onAction="#addTeam" text="Add Team" />
+      <Label layoutX="15.0" layoutY="18.0" text="name" />
+      <Label layoutX="15.0" layoutY="41.0" text="country" />
+      <Label layoutX="15.0" layoutY="63.0" text="arena" />
+      <Label layoutX="16.0" layoutY="88.0" text="conference" />
+      <Label layoutX="15.0" layoutY="110.0" text="division" />
+      <Label layoutX="16.0" layoutY="135.0" text="date created" />
+      <TextField fx:id="name" layoutX="151.0" layoutY="13.0" />
+      <TextField fx:id="country" layoutX="151.0" layoutY="36.0" />
+      <TextField fx:id="arena" layoutX="151.0" layoutY="58.0" />
+      <TextField fx:id="conf" layoutX="151.0" layoutY="83.0" />
+      <TextField fx:id="division" layoutX="151.0" layoutY="105.0" />
+      <TextField fx:id="date" layoutX="152.0" layoutY="130.0" />
+   </children>
+</AnchorPane>
