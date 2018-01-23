@@ -16,9 +16,15 @@ public class UpdateUI {
     public void update(ActionEvent actionEvent) throws SQLException {
         String f = field.getText();
         String v = value.getText();
-        UpdateTeamService.update(ReadUI.curId, f, v);
 
-        Stage stage = (Stage) field.getScene().getWindow();
-        stage.close();
+        try {
+            UpdateTeamService.update(ReadUI.curId, f, v);
+
+            Stage stage = (Stage) field.getScene().getWindow();
+            stage.close();
+        }
+        catch (Throwable t) {
+            System.err.println("Not valid column name or value too long or other SQL exception thrown lol");
+        }
     }
 }

@@ -61,18 +61,28 @@ public class ReadUI {
     @FXML
     public void delete(ActionEvent actionEvent) throws SQLException {
         Team team = tableView.getSelectionModel().getSelectedItem();
-        int id = team.getId();
-        DeleteTeamService.delete(id);
+        try {
+            int id = team.getId();
+            DeleteTeamService.delete(id);
+        }
+        catch (Throwable t) {
+            System.err.println("Row not selected");
+        }
     }
 
     @FXML
     public void update(ActionEvent actionEvent) {
         Team team = tableView.getSelectionModel().getSelectedItem();
-        curId = team.getId();
+        try {
+            curId = team.getId();
 
-        newWindow("update/update.fxml", 197, 178);
+            newWindow("update/update.fxml", 197, 178);
 
-        System.out.println(team.getArena());
+            System.out.println(team.getArena());
+        }
+        catch (Throwable t) {
+            System.err.println("Row not selected");
+        }
     }
 
 
